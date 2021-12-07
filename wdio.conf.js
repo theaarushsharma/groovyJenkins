@@ -132,24 +132,14 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [
-        [
-            'spec',
-            {
-                outputDir: 'spec-report',
-            },
-        ],
-    
-        [
-            'junit',
-            {
-                outputDir: './report',
-                outputFileFormat: function(options){
-                    return `results-${new Date().getTime()}.xml`;
-                },
-            },   
-        ],
-    ],
+      reporters: ['spec',
+	['junit',{
+		outputDir:'./report/',
+		outputFileFormat: function(options) {
+			 return `results-${new Date().getTime()}.xml`
+		}
+	}]
+	],
 
 
     
